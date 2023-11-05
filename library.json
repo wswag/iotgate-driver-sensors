@@ -1,0 +1,26 @@
+{
+  "name": "iotgate-driver-dht11",
+  "version": "1.0.0",
+  "description": "dht11 device driver for iotgate",
+  "keywords": "dht11",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/wswag/iotgate-driver-dht11.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Wolfgang Sebastian Wagner",
+      "email": "sewagn@gmail.com",
+      "url": ""
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/wswag",
+  "dependencies": {
+    "DHT11": "adidax/DHT11"
+  },
+  "frameworks": "*",
+  "platforms": "*"
+}
