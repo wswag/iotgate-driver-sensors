@@ -19,7 +19,8 @@
   "license": "MIT",
   "homepage": "https://github.com/wswag",
   "dependencies": {
-    "DHT11": "adidax/DHT11"
+    "DHT11": "adidax/DHT11",
+    "iotgate": "https://github.com/wswag/iotgate.git"
   },
   "frameworks": "*",
   "platforms": "*"

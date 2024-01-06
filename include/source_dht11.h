@@ -16,7 +16,7 @@ class Source_DHT11 : public DataSource {
         dht11 _dht;
     public:
         Source_DHT11(dht11data_t& dst, int pin);
-        void internalUpdate() override;
+        source_updateresult_t internalUpdate() override;
 };
 
 #endif /* SOURCE_DHT11_H */
