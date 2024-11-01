@@ -1,12 +1,12 @@
 {
-  "name": "iotgate-driver-dht11",
+  "name": "iotgate-driver-sensors",
   "version": "1.0.0",
   "description": "dht11 device driver for iotgate",
   "keywords": "dht11",
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/wswag/iotgate-driver-dht11.git"
+    "url": "https://github.com/wswag/iotgate-driver-sensors.git"
   },
   "authors":
   [
@@ -19,8 +19,6 @@
   "license": "MIT",
   "homepage": "https://github.com/wswag",
   "dependencies": {
-    "adafruit-ufs": "adafruit/Adafruit Unified Sensor@^1.1.14",
-    "adafruit-dht": "github.com/WingCode/DHT-sensor-library"
   },
   "frameworks": "*",
   "platforms": "*"
