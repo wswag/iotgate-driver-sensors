@@ -12,8 +12,6 @@ struct DhtReadState {
 };
 
 class DHTBased : public DataSource {
-    private:
-        DhtReadState _currentState;
     protected:
         uint8_t data[5];
         uint8_t _pin = 0;
