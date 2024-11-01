@@ -1,6 +1,5 @@
-#ifndef IOTGATE-DRIVER-SENSORS_H
-#define IOTGATE-DRIVER-SENSORS_H
-
+#ifndef IOTGATE_DRIVER_SENSORS_H
+#define IOTGATE_DRIVER_SENSORS_H
 
 #include <iotgate.h>
 
@@ -48,4 +47,4 @@ class Sensor_DHT22 : public DHTBased {
 
 
 
-#endif /* IOTGATE-DRIVER-SENSORS_H */
+#endif /* IOTGATE_DRIVER_SENSORS_H */
