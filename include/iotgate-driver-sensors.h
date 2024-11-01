@@ -1,10 +1,8 @@
-#ifndef DHT11_H
-#define DHT11_H
+#ifndef IOTGATE-DRIVER-SENSORS_H
+#define IOTGATE-DRIVER-SENSORS_H
+
 
 #include <iotgate.h>
-#include <Adafruit_Sensor.h>
-#include <DHT.h>
-#include <DHT_U.h>
 
 struct DhtReadState {
   uint32_t cycles[84];
@@ -50,4 +48,6 @@ class Sensor_DHT22 : public DHTBased {
         ACQUIREDRIVERDEF(PIN pin);
 };
 
-#endif /* DHT11_H */
+
+
+#endif /* IOTGATE-DRIVER-SENSORS_H */
