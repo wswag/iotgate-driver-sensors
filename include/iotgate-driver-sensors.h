@@ -14,14 +14,18 @@ class DHTBased : public DataSource {
     protected:
         uint8_t data[5];
         uint8_t _pin = 0;
+        float _temperatureOffset = 0.0;
+        float _humidtyOffset = 0.0;
 
         bool readSensor(int initDelayMicros);
+        void tareMeasures();
     public:
         // data
         float temperature;
         float humidity;
 
         PUBLISHERDRIVERDEF;
+        void calibrate(float temperatureOffset, float humidityOffset);
 };
 
 class Sensor_DHT11 : public DHTBased {

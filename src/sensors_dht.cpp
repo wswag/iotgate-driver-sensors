@@ -92,6 +92,17 @@ bool DHTBased::readSensor(int initDelayMicros) {
     return true;
 }
 
+void DHTBased::calibrate(float temperatureOffset, float humidityOffset)
+{
+    _temperatureOffset = temperatureOffset;
+    _humidtyOffset = humidityOffset;
+}
+
+void DHTBased::tareMeasures() {
+    temperature += _temperatureOffset;
+    humidity += _humidtyOffset;
+}
+
 source_updateresult_t Sensor_DHT11::internalUpdate() {
     //pinMode(_pin, OUTPUT);
     if (readSensor(20000)) {
@@ -101,7 +112,7 @@ source_updateresult_t Sensor_DHT11::internalUpdate() {
             temperature = -1 - temperature;
         }
         temperature += (data[3] & 0x0f) * 0.1;
-      
+        tareMeasures();
         validate();
         return SOURCE_UPDATE_COMPLETED;
     }
@@ -122,6 +133,7 @@ source_updateresult_t Sensor_DHT21::internalUpdate() {
         if (data[2] & 0x80) {
             temperature *= -1;
         }
+        tareMeasures();
         validate();
         return SOURCE_UPDATE_COMPLETED;
     }
@@ -143,6 +155,7 @@ source_updateresult_t Sensor_DHT22::internalUpdate() {
         if (data[2] & 0x80) {
             temperature *= -1;
         }
+        tareMeasures();
         validate();
         return SOURCE_UPDATE_COMPLETED;
     }
